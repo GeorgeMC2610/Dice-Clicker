@@ -26,8 +26,8 @@ namespace csharp_vathomologoumeni_1
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            //DiceClicker form2 = new DiceClicker();
-            //form2.Show();
+            DiceClicker form2 = new DiceClicker(option);
+            form2.Show();
             Hide();
         }
 
@@ -39,7 +39,25 @@ namespace csharp_vathomologoumeni_1
         private void Easy_CheckedChanged(object sender, EventArgs e)
         {
             playButton.Enabled = true;
-            option = (Easy.Checked) ? (short) 1 : option; 
+            option = (Easy.Checked) ? (short)1 : option; 
+        }
+
+        private void Normal_CheckedChanged(object sender, EventArgs e)
+        {
+            playButton.Enabled = true;
+            option = (Normal.Checked) ? (short)2 : option;
+        }
+
+        private void Hard_CheckedChanged(object sender, EventArgs e)
+        {
+            playButton.Enabled = true;
+            option = (Hard.Checked) ? (short)3 : option;
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            playButton.Enabled = true;
+            option = (Expert.Checked) ? (short)4 : option;
         }
     }
 }
