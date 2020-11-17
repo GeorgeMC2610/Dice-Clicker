@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace csharp_vathomologoumeni_1
 {
-    public partial class MainMenu : Form
+    public partial class DiceClicker : Form
     {
-        public MainMenu()
+        public DiceClicker()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void playButton_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }
