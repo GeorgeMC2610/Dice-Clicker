@@ -26,7 +26,8 @@ namespace csharp_vathomologoumeni_1
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            DiceClicker form2 = new DiceClicker(option);
+            //when the player presses the play button, we hide this form, and we open the other one which plays the game
+            DiceClicker form2 = new DiceClicker(option); //We also pass the difficulty value in the other form
             form2.Show();
             Hide();
         }
@@ -36,6 +37,7 @@ namespace csharp_vathomologoumeni_1
 
         }
 
+        //In each of these functions the difficulty option changes depending on the radio buttons
         private void Easy_CheckedChanged(object sender, EventArgs e)
         {
             playButton.Enabled = true;

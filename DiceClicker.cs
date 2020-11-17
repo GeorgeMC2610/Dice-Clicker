@@ -93,12 +93,14 @@ namespace csharp_vathomologoumeni_1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            //When the player clicks the picture box, we add points to his score, depending on the dice
             score += (index + 1);
             label2.Text = "Score: " + score.ToString();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
+            //This timer controls the seconds left
             time--;
             if (time == 0)
                 EndGame();
@@ -108,6 +110,7 @@ namespace csharp_vathomologoumeni_1
 
         private void EndGame()
         {
+            //When the timer runs out this function 
             new MainMenu().Show();
             Close();
         }
