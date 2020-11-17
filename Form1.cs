@@ -12,6 +12,8 @@ namespace csharp_vathomologoumeni_1
 {
     public partial class MainMenu : Form
     {
+        short option;
+
         public MainMenu()
         {
             InitializeComponent();
@@ -19,14 +21,25 @@ namespace csharp_vathomologoumeni_1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            playButton.Enabled = false;
         }
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            DiceClicker form2 = new DiceClicker();
-            form2.Show();
-            this.Close();
+            //DiceClicker form2 = new DiceClicker();
+            //form2.Show();
+            Hide();
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Easy_CheckedChanged(object sender, EventArgs e)
+        {
+            playButton.Enabled = true;
+            option = (Easy.Checked) ? (short) 1 : option; 
         }
     }
 }

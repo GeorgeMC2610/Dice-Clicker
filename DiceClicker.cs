@@ -12,14 +12,17 @@ namespace csharp_vathomologoumeni_1
 {
     public partial class DiceClicker : Form
     {
-        public DiceClicker()
+        short difficulty;
+
+        public DiceClicker(short difficulty)
         {
             InitializeComponent();
+            this.difficulty = difficulty;
         }
 
         private void DiceClicker_Load(object sender, EventArgs e)
         {
-            new MainMenu().Close();
+            
         }
     }
 }

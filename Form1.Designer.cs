@@ -30,6 +30,9 @@
         {
             this.playButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Easy = new System.Windows.Forms.RadioButton();
+            this.Normal = new System.Windows.Forms.RadioButton();
+            this.Hard = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,11 +56,48 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.Hard);
+            this.panel1.Controls.Add(this.Normal);
+            this.panel1.Controls.Add(this.Easy);
             this.panel1.Controls.Add(this.playButton);
             this.panel1.Location = new System.Drawing.Point(12, 124);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(960, 325);
             this.panel1.TabIndex = 1;
+            // 
+            // Easy
+            // 
+            this.Easy.AutoSize = true;
+            this.Easy.Location = new System.Drawing.Point(3, 3);
+            this.Easy.Name = "Easy";
+            this.Easy.Size = new System.Drawing.Size(63, 23);
+            this.Easy.TabIndex = 1;
+            this.Easy.TabStop = true;
+            this.Easy.Text = "Easy";
+            this.Easy.UseVisualStyleBackColor = true;
+            this.Easy.CheckedChanged += new System.EventHandler(this.Easy_CheckedChanged);
+            // 
+            // Normal
+            // 
+            this.Normal.AutoSize = true;
+            this.Normal.Location = new System.Drawing.Point(3, 32);
+            this.Normal.Name = "Normal";
+            this.Normal.Size = new System.Drawing.Size(81, 23);
+            this.Normal.TabIndex = 2;
+            this.Normal.TabStop = true;
+            this.Normal.Text = "Normal";
+            this.Normal.UseVisualStyleBackColor = true;
+            // 
+            // Hard
+            // 
+            this.Hard.AutoSize = true;
+            this.Hard.Location = new System.Drawing.Point(3, 61);
+            this.Hard.Name = "Hard";
+            this.Hard.Size = new System.Drawing.Size(63, 23);
+            this.Hard.TabIndex = 3;
+            this.Hard.TabStop = true;
+            this.Hard.Text = "Hard";
+            this.Hard.UseVisualStyleBackColor = true;
             // 
             // MainMenu
             // 
@@ -71,6 +111,7 @@
             this.Text = "Main Menu";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -79,6 +120,9 @@
 
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton Normal;
+        private System.Windows.Forms.RadioButton Easy;
+        private System.Windows.Forms.RadioButton Hard;
     }
 }
 
