@@ -16,5 +16,10 @@ namespace csharp_vathomologoumeni_1
         {
             InitializeComponent();
         }
+
+        private void DiceClicker_Load(object sender, EventArgs e)
+        {
+            new MainMenu().Close();
+        }
     }
 }

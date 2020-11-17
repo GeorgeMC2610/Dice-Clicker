@@ -24,7 +24,9 @@ namespace csharp_vathomologoumeni_1
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            
+            DiceClicker form2 = new DiceClicker();
+            form2.Show();
+            this.Close();
         }
     }
 }
