@@ -122,7 +122,7 @@ namespace csharp_vathomologoumeni_1
         {
             //When the timer runs out this function
             timer1.Enabled = timer2.Enabled = false;
-            MessageBox.Show("Game over!\n\n Total Score: " + score.ToString());
+            MessageBox.Show("Total Score: " + score.ToString(), "Game Over!");
             new MainMenu().Show();
             Close();
         }
