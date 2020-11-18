@@ -84,6 +84,13 @@ namespace csharp_vathomologoumeni_1
             index = (short) random.Next(0, 6);
             pictureBox1.ImageLocation = Images[index];
 
+            //The bomb only appears with a 5% chance and only if the difficulty is above Normal.
+            if (difficulty > 2)
+            {
+                short bomb = (short) random.Next(0, 100);
+                pictureBox1.ImageLocation = (bomb > 94) ? "dice/bomb.jpg" : pictureBox1.ImageLocation;
+            }
+
             //the location also randomly changes. But we don't want it to clip out of the window. So we set the bounds accordingly
             int x = random.Next(Width - pictureBox1.Width);
             int y = random.Next(Height - pictureBox1.Height);
@@ -94,7 +101,11 @@ namespace csharp_vathomologoumeni_1
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             //When the player clicks the picture box, we add points to his score, depending on the dice
-            score += (index + 1);
+            if (pictureBox1.ImageLocation == "dice/bomb.jpg")
+                score -= 10;
+            else
+                score += (index + 1);
+
             label2.Text = "Score: " + score.ToString();
         }
 
@@ -110,7 +121,9 @@ namespace csharp_vathomologoumeni_1
 
         private void EndGame()
         {
-            //When the timer runs out this function 
+            //When the timer runs out this function
+            timer1.Enabled = timer2.Enabled = false;
+            MessageBox.Show("Game over!\n\n Total Score: " + score.ToString());
             new MainMenu().Show();
             Close();
         }
