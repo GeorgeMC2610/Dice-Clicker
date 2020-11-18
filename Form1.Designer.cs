@@ -40,6 +40,7 @@
             this.Hard_HI = new System.Windows.Forms.Button();
             this.Expert_HI = new System.Windows.Forms.Button();
             this.HI_Scores = new System.Windows.Forms.Label();
+            this.ExitGame = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -143,6 +144,7 @@
             // 
             // Easy_HI
             // 
+            this.Easy_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Easy_HI.BackColor = System.Drawing.Color.Green;
             this.Easy_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Easy_HI.Location = new System.Drawing.Point(768, 44);
@@ -154,6 +156,7 @@
             // 
             // Normal_HI
             // 
+            this.Normal_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Normal_HI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Normal_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Normal_HI.Location = new System.Drawing.Point(768, 77);
@@ -165,6 +168,7 @@
             // 
             // Hard_HI
             // 
+            this.Hard_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Hard_HI.BackColor = System.Drawing.Color.Red;
             this.Hard_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Hard_HI.Location = new System.Drawing.Point(768, 110);
@@ -176,6 +180,7 @@
             // 
             // Expert_HI
             // 
+            this.Expert_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Expert_HI.BackColor = System.Drawing.Color.Maroon;
             this.Expert_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Expert_HI.Location = new System.Drawing.Point(768, 143);
@@ -187,6 +192,7 @@
             // 
             // HI_Scores
             // 
+            this.HI_Scores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.HI_Scores.AutoSize = true;
             this.HI_Scores.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HI_Scores.ForeColor = System.Drawing.SystemColors.Control;
@@ -196,12 +202,26 @@
             this.HI_Scores.TabIndex = 9;
             this.HI_Scores.Text = "Highest Scores";
             // 
+            // ExitGame
+            // 
+            this.ExitGame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExitGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ExitGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExitGame.Location = new System.Drawing.Point(872, 3);
+            this.ExitGame.Name = "ExitGame";
+            this.ExitGame.Size = new System.Drawing.Size(110, 35);
+            this.ExitGame.TabIndex = 8;
+            this.ExitGame.Text = "Close Game";
+            this.ExitGame.UseVisualStyleBackColor = false;
+            this.ExitGame.Click += new System.EventHandler(this.ExitGame_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.ExitGame);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -231,6 +251,7 @@
         private System.Windows.Forms.Button Hard_HI;
         private System.Windows.Forms.Button Normal_HI;
         private System.Windows.Forms.Button Easy_HI;
+        private System.Windows.Forms.Button ExitGame;
     }
 }
 

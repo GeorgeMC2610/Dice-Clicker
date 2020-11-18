@@ -12,6 +12,10 @@ namespace csharp_vathomologoumeni_1
 {
     public partial class MainMenu : Form
     {
+        string[] EasyHI   = new string[5];
+        string[] NormalHI = new string[5];
+        string[] HardHI   = new string[5];
+        string[] ExpertHI = new string[5];
         short option;
 
         public MainMenu()
@@ -65,6 +69,11 @@ namespace csharp_vathomologoumeni_1
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ExitGame_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

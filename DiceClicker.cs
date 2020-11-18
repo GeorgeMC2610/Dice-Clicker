@@ -18,7 +18,6 @@ namespace csharp_vathomologoumeni_1
         short index = 0;
         int score = 0;
         int time = 60;
-        
 
         public DiceClicker(short difficulty)
         {
