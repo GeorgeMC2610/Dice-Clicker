@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -123,6 +124,18 @@ namespace csharp_vathomologoumeni_1
             //When the timer runs out this function
             timer1.Enabled = timer2.Enabled = false;
             MessageBox.Show("Total Score: " + score.ToString(), "Game Over!");
+
+            try
+            {
+                StreamReader sr = new StreamReader(label3.Text + ".txt");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot store score, file not found.\n Exception Message: " + ex.Message, "ERROR");
+            }
+                
+
             new MainMenu().Show();
             Close();
         }
