@@ -77,23 +77,38 @@ namespace csharp_vathomologoumeni_1
                 }
             }
 
-            for (int i = 0; i > points.Length; i++)
+            //in order to display the data to the other form, we need to use this loop
+            for (int i = 0; i < points.Length; i++)
             {
+                //first we create a variable for each possible difficulty we encounters
                 int easy_counter = 0, normal_counter = 0, hard_counter = 0, expert_counter = 0;
 
+                //and then we display the first five of each difficulty.
+                //if there are less than five high score holders, the default value is three dashes ("---").
                 if (difficulty[i].Equals("EASY") && easy_counter <= 5)
                 {
-                    MainMenu.EasyHI[i] = name[i] + ", " + points[i].ToString() + " points.";
+                    MainMenu.EasyHI[easy_counter] = name[i] + ", " + points[i].ToString() + " points";
                     easy_counter++;
                 }
 
                 if (difficulty[i].Equals("NORMAL") && normal_counter <= 5)
                 {
-                    MainMenu.NormalHI[i] = name[i] + ", " + points[i].ToString() + " points.";
+                    MainMenu.NormalHI[normal_counter] = name[i] + ", " + points[i].ToString() + " points";
                     normal_counter++;
                 }
-            }
 
+                if (difficulty[i].Equals("HARD") && easy_counter <= 5)
+                {
+                    MainMenu.HardHI[hard_counter] = name[i] + ", " + points[i].ToString() + " points";
+                    hard_counter++;
+                }
+
+                if (difficulty[i].Equals("EXPERT") && easy_counter <= 5)
+                {
+                    MainMenu.ExpertHI[expert_counter] = name[i] + ", " + points[i].ToString() + " points";
+                    expert_counter++;
+                }
+            }
         }
     }
 }
