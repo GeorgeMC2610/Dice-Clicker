@@ -43,6 +43,8 @@
             this.ExitGame = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Nickname = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +71,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.Nickname);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.HI_Scores);
             this.panel1.Controls.Add(this.Expert_HI);
             this.panel1.Controls.Add(this.Hard_HI);
@@ -244,6 +248,23 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "CLICKER";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(198, 127);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(310, 26);
+            this.textBox1.TabIndex = 10;
+            // 
+            // Nickname
+            // 
+            this.Nickname.AutoSize = true;
+            this.Nickname.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Nickname.Location = new System.Drawing.Point(194, 105);
+            this.Nickname.Name = "Nickname";
+            this.Nickname.Size = new System.Drawing.Size(81, 19);
+            this.Nickname.TabIndex = 11;
+            this.Nickname.Text = "Nickname";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -286,6 +307,8 @@
         private System.Windows.Forms.Button ExitGame;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Nickname;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

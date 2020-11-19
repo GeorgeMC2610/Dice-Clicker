@@ -127,8 +127,8 @@ namespace csharp_vathomologoumeni_1
 
             try
             {
-                StreamReader sr = new StreamReader("highscores.txt");
-
+                StreamWriter sw = new StreamWriter("highscores.txt", true);
+                sw.WriteLine("George1|" + label3.Text + "|" + score.ToString());
             }
             catch (Exception ex)
             {
