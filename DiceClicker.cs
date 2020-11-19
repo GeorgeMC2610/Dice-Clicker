@@ -15,17 +15,19 @@ namespace csharp_vathomologoumeni_1
     {
         //The array with the images, the difficulty, the random dice, score and time are all global variables, since we want them accessible in multiple functions.
         string[] Images = new string[6];
+        string username;
         short difficulty;
         short index = 0;
         int score = 0;
         int time = 60;
 
-        public DiceClicker(short difficulty)
+        public DiceClicker(short difficulty, string username)
         {
             InitializeComponent();
 
             //We get the difficulty from the previous form with this constructor.
             this.difficulty = difficulty;
+            this.username = username;
         }
 
         private void DiceClicker_Load(object sender, EventArgs e)
@@ -41,6 +43,7 @@ namespace csharp_vathomologoumeni_1
             //Set the labels and timers with their starting values.
             label1.Text = "Time: 60";
             label2.Text = "Score: 0";
+            label4.Text = "Player: " + username;
             timer1.Enabled = timer2.Enabled = true;
 
             //The location movement speed and picturebox size depend on the difficulty the user chose.
@@ -127,8 +130,25 @@ namespace csharp_vathomologoumeni_1
 
             try
             {
-                StreamWriter sw = new StreamWriter("highscores.txt", true);
-                sw.WriteLine("George1|" + label3.Text + "|" + score.ToString());
+                StreamReader sr = new StreamReader("highscores.txt");
+
+                string All = sr.ReadToEnd();
+                if (All.Length < 3)
+                {
+                    sr.Close();
+
+                    StreamWriter sw = new StreamWriter("highscores.txt", true);
+                    sw.Write(username + "|" + label3.Text + "|" + score.ToString());
+                    sw.Close();
+                }
+                else
+                {
+                    sr.Close();
+
+                    StreamWriter sw = new StreamWriter("highscores.txt", true);
+                    sw.Write("\n" + username + "|" + label3.Text + "|" + score.ToString());
+                    sw.Close();
+                }
             }
             catch (Exception ex)
             {

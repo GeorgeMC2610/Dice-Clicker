@@ -39,7 +39,7 @@ namespace csharp_vathomologoumeni_1
         private void playButton_Click(object sender, EventArgs e)
         {
             //when the player presses the play button, we hide this form, and we open the other one which plays the game
-            DiceClicker form2 = new DiceClicker(option);        //We also pass the difficulty value in the other form
+            DiceClicker form2 = new DiceClicker(option, textBox1.Text);        //We also pass the difficulty value in the other form
             form2.Show();
 
             //After we show the other form to the user, we hide this one, so it doesn't open twice.
@@ -69,24 +69,28 @@ namespace csharp_vathomologoumeni_1
         private void Easy_CheckedChanged(object sender, EventArgs e)
         {
             radioButtonSelected = true;
+            checkForEnable();
             option = 1;
         }
 
         private void Normal_CheckedChanged(object sender, EventArgs e)
         {
             radioButtonSelected = true;
+            checkForEnable();
             option = 2;
         }
 
         private void Hard_CheckedChanged(object sender, EventArgs e)
         {
             radioButtonSelected = true;
+            checkForEnable();
             option = 3;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             radioButtonSelected = true;
+            checkForEnable();
             option = 4;
         }
 

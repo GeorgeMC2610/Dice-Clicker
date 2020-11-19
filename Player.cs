@@ -39,9 +39,12 @@ namespace csharp_vathomologoumeni_1
             string[] allScores = Reader.Split('\n');
 
             //then we set three different arrays. One for the name of the score holder, one for the difficulty they played and one for their score.
-            string[] name = new string[allScores.Length];
+            string[] name       = new string[allScores.Length];
             string[] difficulty = new string[allScores.Length];
-            int[] points = new int[allScores.Length];
+            int[] points        = new int[allScores.Length];
+
+            if (allScores.Length == 0)
+                return;
 
             //to split the attributes, we use the '|' character inside the notepad, for easy extraction.
             for (int i = 0; i < allScores.Length; i++)
@@ -112,6 +115,8 @@ namespace csharp_vathomologoumeni_1
                     expert_counter++;
                 }
             }
+
+            sr.Close();
         }
     }
 }
