@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +13,10 @@ namespace csharp_vathomologoumeni_1
 {
     public partial class MainMenu : Form
     {
-        string[] EasyHI   = new string[5];
-        string[] NormalHI = new string[5];
-        string[] HardHI   = new string[5];
-        string[] ExpertHI = new string[5];
+        static string[] EasyHI   = new string[5];
+        static string[] NormalHI = new string[5];
+        static string[] HardHI   = new string[5];
+        static string[] ExpertHI = new string[5];
         short option;
 
         public MainMenu()
@@ -26,6 +27,12 @@ namespace csharp_vathomologoumeni_1
         private void Form1_Load(object sender, EventArgs e)
         {
             playButton.Enabled = false;
+            playButton.BackColor = Color.LightGray;
+
+            for (int i = 0; i < 5; i++)
+                EasyHI[i] = NormalHI[i] = HardHI[i] = ExpertHI[i] = "---";
+
+            Player.SortHighScores();
         }
 
         private void playButton_Click(object sender, EventArgs e)
@@ -47,24 +54,28 @@ namespace csharp_vathomologoumeni_1
         private void Easy_CheckedChanged(object sender, EventArgs e)
         {
             playButton.Enabled = true;
+            playButton.BackColor = Color.RoyalBlue;
             option = (Easy.Checked) ? (short)1 : option; 
         }
 
         private void Normal_CheckedChanged(object sender, EventArgs e)
         {
             playButton.Enabled = true;
+            playButton.BackColor = Color.RoyalBlue;
             option = (Normal.Checked) ? (short)2 : option;
         }
 
         private void Hard_CheckedChanged(object sender, EventArgs e)
         {
             playButton.Enabled = true;
+            playButton.BackColor = Color.RoyalBlue;
             option = (Hard.Checked) ? (short)3 : option;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             playButton.Enabled = true;
+            playButton.BackColor = Color.RoyalBlue;
             option = (Expert.Checked) ? (short)4 : option;
         }
 

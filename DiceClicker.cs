@@ -127,7 +127,7 @@ namespace csharp_vathomologoumeni_1
 
             try
             {
-                StreamReader sr = new StreamReader(label3.Text + ".txt");
+                StreamReader sr = new StreamReader("highscores.txt");
 
             }
             catch (Exception ex)

@@ -53,7 +53,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.playButton.BackColor = System.Drawing.Color.RoyalBlue;
             this.playButton.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.playButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.playButton.Location = new System.Drawing.Point(3, 271);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(952, 47);
@@ -167,7 +167,6 @@
             this.Expert.Name = "Expert";
             this.Expert.Size = new System.Drawing.Size(81, 23);
             this.Expert.TabIndex = 4;
-            this.Expert.TabStop = true;
             this.Expert.Text = "Expert";
             this.Expert.UseVisualStyleBackColor = true;
             this.Expert.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
@@ -175,11 +174,11 @@
             // Easy
             // 
             this.Easy.AutoSize = true;
+            this.Easy.Cursor = System.Windows.Forms.Cursors.Default;
             this.Easy.Location = new System.Drawing.Point(6, 25);
             this.Easy.Name = "Easy";
             this.Easy.Size = new System.Drawing.Size(63, 23);
             this.Easy.TabIndex = 1;
-            this.Easy.TabStop = true;
             this.Easy.Text = "Easy";
             this.Easy.UseVisualStyleBackColor = true;
             this.Easy.CheckedChanged += new System.EventHandler(this.Easy_CheckedChanged);
@@ -191,7 +190,6 @@
             this.Hard.Name = "Hard";
             this.Hard.Size = new System.Drawing.Size(63, 23);
             this.Hard.TabIndex = 3;
-            this.Hard.TabStop = true;
             this.Hard.Text = "Hard";
             this.Hard.UseVisualStyleBackColor = true;
             this.Hard.CheckedChanged += new System.EventHandler(this.Hard_CheckedChanged);
@@ -203,7 +201,6 @@
             this.Normal.Name = "Normal";
             this.Normal.Size = new System.Drawing.Size(81, 23);
             this.Normal.TabIndex = 2;
-            this.Normal.TabStop = true;
             this.Normal.Text = "Normal";
             this.Normal.UseVisualStyleBackColor = true;
             this.Normal.CheckedChanged += new System.EventHandler(this.Normal_CheckedChanged);
@@ -240,7 +237,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(359, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(288, 77);
