@@ -18,6 +18,7 @@ namespace csharp_vathomologoumeni_1
         public static string[] HardHI   = new string[5];
         public static string[] ExpertHI = new string[5];
         short option;
+        bool radioButtonSelected = false, textBoxNotEmpty = false;
 
         public MainMenu()
         {
@@ -50,33 +51,43 @@ namespace csharp_vathomologoumeni_1
 
         }
 
+        private void checkForEnable()
+        {
+            if (radioButtonSelected && textBoxNotEmpty)
+            {
+                playButton.Enabled = true;
+                playButton.BackColor = Color.RoyalBlue;
+            }
+            else
+            {
+                playButton.Enabled = false;
+                playButton.BackColor = Color.LightGray;
+            }
+        }
+
         //In each of these functions the difficulty option changes depending on the radio buttons
         private void Easy_CheckedChanged(object sender, EventArgs e)
         {
-            playButton.Enabled = true;
-            playButton.BackColor = Color.RoyalBlue;
-            option = (Easy.Checked) ? (short)1 : option; 
+            radioButtonSelected = true;
+            option = 1;
         }
 
         private void Normal_CheckedChanged(object sender, EventArgs e)
         {
-            playButton.Enabled = true;
-            playButton.BackColor = Color.RoyalBlue;
-            option = (Normal.Checked) ? (short)2 : option;
+            radioButtonSelected = true;
+            option = 2;
         }
 
         private void Hard_CheckedChanged(object sender, EventArgs e)
         {
-            playButton.Enabled = true;
-            playButton.BackColor = Color.RoyalBlue;
-            option = (Hard.Checked) ? (short)3 : option;
+            radioButtonSelected = true;
+            option = 3;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            playButton.Enabled = true;
-            playButton.BackColor = Color.RoyalBlue;
-            option = (Expert.Checked) ? (short)4 : option;
+            radioButtonSelected = true;
+            option = 4;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -117,6 +128,16 @@ namespace csharp_vathomologoumeni_1
         private void Expert_HI_Click(object sender, EventArgs e)
         {
             ShowHighScores(ExpertHI, "Expert");
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length == 0)
+                textBoxNotEmpty = false;
+            else
+                textBoxNotEmpty = true;
+
+            checkForEnable();
         }
     }
 }
