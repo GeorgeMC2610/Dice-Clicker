@@ -13,10 +13,10 @@ namespace csharp_vathomologoumeni_1
 {
     public partial class MainMenu : Form
     {
-        static string[] EasyHI   = new string[5];
-        static string[] NormalHI = new string[5];
-        static string[] HardHI   = new string[5];
-        static string[] ExpertHI = new string[5];
+        public static string[] EasyHI   = new string[5];
+        public static string[] NormalHI = new string[5];
+        public static string[] HardHI   = new string[5];
+        public static string[] ExpertHI = new string[5];
         short option;
 
         public MainMenu()

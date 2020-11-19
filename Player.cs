@@ -54,6 +54,45 @@ namespace csharp_vathomologoumeni_1
                 points[i]     = int.Parse(attributes[2]);
             }
 
+            //then we sort the arrays by descending score
+            //the sorting algorithm (Bubble Sort) has to be hardcoded, since we want to sort multiple arrays.
+            for (int i = 1; i < points.Length; i++)
+            {
+                for (int j = points.Length-1; j > i-1; j--)
+                {
+                    if (points[j] > points[j-1])
+                    {
+                        int temp0 = points[j];
+                        points[j] = points[j - 1];
+                        points[j - 1] = temp0;
+
+                        string temp1 = name[j];
+                        name[j] = name[j - 1];
+                        name[j - 1] = temp1;
+
+                        string temp2 = difficulty[j];
+                        difficulty[j] = difficulty[j - 1];
+                        difficulty[j - 1] = temp2;
+                    }
+                }
+            }
+
+            for (int i = 0; i > points.Length; i++)
+            {
+                int easy_counter = 0, normal_counter = 0, hard_counter = 0, expert_counter = 0;
+
+                if (difficulty[i].Equals("EASY") && easy_counter <= 5)
+                {
+                    MainMenu.EasyHI[i] = name[i] + ", " + points[i].ToString() + " points.";
+                    easy_counter++;
+                }
+
+                if (difficulty[i].Equals("NORMAL") && normal_counter <= 5)
+                {
+                    MainMenu.NormalHI[i] = name[i] + ", " + points[i].ToString() + " points.";
+                    normal_counter++;
+                }
+            }
 
         }
     }
