@@ -12,9 +12,9 @@ namespace csharp_vathomologoumeni_1
 {
     public partial class MainMenu : Form
     {
-        string[] EasyHI = new string[5];
+        string[] EasyHI   = new string[5];
         string[] NormalHI = new string[5];
-        string[] HardHI = new string[5];
+        string[] HardHI   = new string[5];
         string[] ExpertHI = new string[5];
         short option;
 
@@ -78,40 +78,34 @@ namespace csharp_vathomologoumeni_1
             Close();
         }
 
+        //Here we show the highest scores using the buttons provided
+        private void ShowHighScores(string[] highScores, string level)
+        {
+            MessageBox.Show("1. " + highScores[0] + "\n" +
+                            "2. " + highScores[1] + "\n" +
+                            "3. " + highScores[2] + "\n" +
+                            "4. " + highScores[3] + "\n" +
+                            "5. " + highScores[4] + "\n", level + " level highest score holders");
+        }
+
         private void Easy_HI_Click(object sender, EventArgs e)
-        { 
-            MessageBox.Show("1. " + EasyHI[0] + "\n" +
-                            "2. " + EasyHI[1] + "\n" +
-                            "3. " + EasyHI[2] + "\n" +
-                            "4. " + EasyHI[3] + "\n" +
-                            "5. " + EasyHI[4] + "\n", "Easy level highest score holders");
+        {
+            ShowHighScores(EasyHI, "Easy");
         }
 
         private void Normal_HI_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1. " + NormalHI[0] + "\n" +
-                            "2. " + NormalHI[1] + "\n" +
-                            "3. " + NormalHI[2] + "\n" +
-                            "4. " + NormalHI[3] + "\n" +
-                            "5. " + NormalHI[4] + "\n", "Normal level highest score holders");
+            ShowHighScores(NormalHI, "Normal");
         }
 
         private void Hard_HI_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1. " + HardHI[0] + "\n" +
-                            "2. " + HardHI[1] + "\n" +
-                            "3. " + HardHI[2] + "\n" +
-                            "4. " + HardHI[3] + "\n" +
-                            "5. " + HardHI[4] + "\n", "Hard level highest score holders");
+            ShowHighScores(HardHI, "Hard");
         }
 
         private void Expert_HI_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("1. " + ExpertHI[0] + "\n" +
-                            "2. " + ExpertHI[1] + "\n" +
-                            "3. " + ExpertHI[2] + "\n" +
-                            "4. " + ExpertHI[3] + "\n" +
-                            "5. " + ExpertHI[4] + "\n", "Expert level highest score holders");
+            ShowHighScores(ExpertHI, "Expert");
         }
     }
 }
