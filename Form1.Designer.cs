@@ -45,6 +45,7 @@
             this.ExitGame = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Nickname);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.HI_Scores);
@@ -115,7 +117,7 @@
             this.HI_Scores.AutoSize = true;
             this.HI_Scores.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HI_Scores.ForeColor = System.Drawing.SystemColors.Control;
-            this.HI_Scores.Location = new System.Drawing.Point(775, 4);
+            this.HI_Scores.Location = new System.Drawing.Point(773, 4);
             this.HI_Scores.Name = "HI_Scores";
             this.HI_Scores.Size = new System.Drawing.Size(178, 24);
             this.HI_Scores.TabIndex = 9;
@@ -282,6 +284,18 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "CLICKER";
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label3.Location = new System.Drawing.Point(6, 211);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(175, 45);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Select a difficulty and \r\nenter a nickname to \r\nstart the game!";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -327,6 +341,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Nickname;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

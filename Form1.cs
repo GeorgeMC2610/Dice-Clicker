@@ -58,12 +58,14 @@ namespace csharp_vathomologoumeni_1
             {
                 playButton.Enabled = true;
                 playButton.BackColor = Color.RoyalBlue;
+                label3.Text = "";
                 //playButton.Cursor = Cursors.Hand;
             }
             else
             {
                 playButton.Enabled = false;
                 playButton.BackColor = Color.LightGray;
+                label3.Text = "Select a difficulty and\nenter a nickname to\nstart the game!";
                 //playButton.Cursor = Cursors.No;
             }
         }
