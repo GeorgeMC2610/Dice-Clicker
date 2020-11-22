@@ -18,7 +18,7 @@ namespace csharp_vathomologoumeni_1
         public static string[] HardHI   = new string[5];
         public static string[] ExpertHI = new string[5];
         short option;
-        bool radioButtonSelected = false, textBoxNotEmpty = false;
+        bool radioButtonSelected = false;
 
         public MainMenu()
         {
@@ -51,17 +51,20 @@ namespace csharp_vathomologoumeni_1
 
         }
 
+        //this checks if the button can be enabled or not. A difficulty option must be selected, and there must be a username provided.
         private void checkForEnable()
         {
-            if (radioButtonSelected && textBoxNotEmpty)
+            if (radioButtonSelected && textBox1.Text.Length != 0)
             {
                 playButton.Enabled = true;
                 playButton.BackColor = Color.RoyalBlue;
+                //playButton.Cursor = Cursors.Hand;
             }
             else
             {
                 playButton.Enabled = false;
                 playButton.BackColor = Color.LightGray;
+                //playButton.Cursor = Cursors.No;
             }
         }
 
@@ -114,6 +117,7 @@ namespace csharp_vathomologoumeni_1
                             "5. " + highScores[4] + "\n", level + " level highest score holders");
         }
 
+        //each one of these buttons will call the function above, and will show the corresponding high scores in order.
         private void Easy_HI_Click(object sender, EventArgs e)
         {
             ShowHighScores(EasyHI, "Easy");
@@ -134,14 +138,16 @@ namespace csharp_vathomologoumeni_1
             ShowHighScores(ExpertHI, "Expert");
         }
 
+        //this ensures the text box won't contain the '|' character, because if it did, it would break the database.
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length == 0)
-                textBoxNotEmpty = false;
-            else
-                textBoxNotEmpty = true;
-
             checkForEnable();
+
+            if (textBox1.Text.Contains('|'))
+            {
+                MessageBox.Show("This character ('|') cannot be entered as a username.", "Invalid Username");
+                textBox1.Text = textBox1.Text.Trim('|');
+            }
         }
     }
 }

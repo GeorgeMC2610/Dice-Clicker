@@ -30,6 +30,8 @@
         {
             this.playButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Nickname = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.HI_Scores = new System.Windows.Forms.Label();
             this.Expert_HI = new System.Windows.Forms.Button();
             this.Hard_HI = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.ExitGame = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Nickname = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,11 +54,13 @@
             this.playButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.playButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.playButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playButton.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.playButton.Location = new System.Drawing.Point(3, 271);
+            this.playButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(952, 47);
+            this.playButton.Size = new System.Drawing.Size(952, 48);
             this.playButton.TabIndex = 0;
             this.playButton.Text = "START GAME";
             this.playButton.UseVisualStyleBackColor = false;
@@ -81,10 +83,31 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.playButton);
             this.panel1.Location = new System.Drawing.Point(12, 124);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(960, 325);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // Nickname
+            // 
+            this.Nickname.AutoSize = true;
+            this.Nickname.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Nickname.Location = new System.Drawing.Point(194, 104);
+            this.Nickname.Name = "Nickname";
+            this.Nickname.Size = new System.Drawing.Size(81, 19);
+            this.Nickname.TabIndex = 11;
+            this.Nickname.Text = "Nickname";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(198, 127);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.MaxLength = 45;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(310, 26);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // HI_Scores
             // 
@@ -92,7 +115,7 @@
             this.HI_Scores.AutoSize = true;
             this.HI_Scores.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HI_Scores.ForeColor = System.Drawing.SystemColors.Control;
-            this.HI_Scores.Location = new System.Drawing.Point(775, 3);
+            this.HI_Scores.Location = new System.Drawing.Point(775, 4);
             this.HI_Scores.Name = "HI_Scores";
             this.HI_Scores.Size = new System.Drawing.Size(178, 24);
             this.HI_Scores.TabIndex = 9;
@@ -103,7 +126,8 @@
             this.Expert_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Expert_HI.BackColor = System.Drawing.Color.Maroon;
             this.Expert_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Expert_HI.Location = new System.Drawing.Point(779, 143);
+            this.Expert_HI.Location = new System.Drawing.Point(778, 142);
+            this.Expert_HI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Expert_HI.Name = "Expert_HI";
             this.Expert_HI.Size = new System.Drawing.Size(165, 27);
             this.Expert_HI.TabIndex = 8;
@@ -116,7 +140,8 @@
             this.Hard_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Hard_HI.BackColor = System.Drawing.Color.Red;
             this.Hard_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Hard_HI.Location = new System.Drawing.Point(779, 110);
+            this.Hard_HI.Location = new System.Drawing.Point(778, 110);
+            this.Hard_HI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Hard_HI.Name = "Hard_HI";
             this.Hard_HI.Size = new System.Drawing.Size(165, 27);
             this.Hard_HI.TabIndex = 7;
@@ -129,7 +154,8 @@
             this.Normal_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Normal_HI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Normal_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Normal_HI.Location = new System.Drawing.Point(779, 77);
+            this.Normal_HI.Location = new System.Drawing.Point(778, 77);
+            this.Normal_HI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Normal_HI.Name = "Normal_HI";
             this.Normal_HI.Size = new System.Drawing.Size(165, 27);
             this.Normal_HI.TabIndex = 6;
@@ -142,7 +168,8 @@
             this.Easy_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Easy_HI.BackColor = System.Drawing.Color.Green;
             this.Easy_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Easy_HI.Location = new System.Drawing.Point(779, 44);
+            this.Easy_HI.Location = new System.Drawing.Point(778, 44);
+            this.Easy_HI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Easy_HI.Name = "Easy_HI";
             this.Easy_HI.Size = new System.Drawing.Size(165, 27);
             this.Easy_HI.TabIndex = 5;
@@ -157,8 +184,10 @@
             this.groupBox1.Controls.Add(this.Hard);
             this.groupBox1.Controls.Add(this.Normal);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(3, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Size = new System.Drawing.Size(162, 150);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -168,6 +197,7 @@
             // 
             this.Expert.AutoSize = true;
             this.Expert.Location = new System.Drawing.Point(6, 112);
+            this.Expert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Expert.Name = "Expert";
             this.Expert.Size = new System.Drawing.Size(81, 23);
             this.Expert.TabIndex = 4;
@@ -180,6 +210,7 @@
             this.Easy.AutoSize = true;
             this.Easy.Cursor = System.Windows.Forms.Cursors.Default;
             this.Easy.Location = new System.Drawing.Point(6, 25);
+            this.Easy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Easy.Name = "Easy";
             this.Easy.Size = new System.Drawing.Size(63, 23);
             this.Easy.TabIndex = 1;
@@ -191,6 +222,7 @@
             // 
             this.Hard.AutoSize = true;
             this.Hard.Location = new System.Drawing.Point(6, 83);
+            this.Hard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Hard.Name = "Hard";
             this.Hard.Size = new System.Drawing.Size(63, 23);
             this.Hard.TabIndex = 3;
@@ -201,7 +233,8 @@
             // Normal
             // 
             this.Normal.AutoSize = true;
-            this.Normal.Location = new System.Drawing.Point(6, 54);
+            this.Normal.Location = new System.Drawing.Point(6, 53);
+            this.Normal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Normal.Name = "Normal";
             this.Normal.Size = new System.Drawing.Size(81, 23);
             this.Normal.TabIndex = 2;
@@ -214,9 +247,10 @@
             this.ExitGame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ExitGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ExitGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ExitGame.Location = new System.Drawing.Point(872, 3);
+            this.ExitGame.Location = new System.Drawing.Point(872, 4);
+            this.ExitGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ExitGame.Name = "ExitGame";
-            this.ExitGame.Size = new System.Drawing.Size(110, 35);
+            this.ExitGame.Size = new System.Drawing.Size(110, 34);
             this.ExitGame.TabIndex = 8;
             this.ExitGame.Text = "Close Game";
             this.ExitGame.UseVisualStyleBackColor = false;
@@ -229,7 +263,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("MV Boli", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(440, 9);
+            this.label1.Location = new System.Drawing.Point(440, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 41);
             this.label1.TabIndex = 10;
@@ -248,30 +282,12 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "CLICKER";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(198, 127);
-            this.textBox1.MaxLength = 45;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(310, 26);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // Nickname
-            // 
-            this.Nickname.AutoSize = true;
-            this.Nickname.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Nickname.Location = new System.Drawing.Point(194, 105);
-            this.Nickname.Name = "Nickname";
-            this.Nickname.Size = new System.Drawing.Size(81, 19);
-            this.Nickname.TabIndex = 11;
-            this.Nickname.Text = "Nickname";
-            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
