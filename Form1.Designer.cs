@@ -30,6 +30,7 @@
         {
             this.playButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.Nickname = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.HI_Scores = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.ExitGame = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.playButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playButton.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.playButton.Location = new System.Drawing.Point(3, 271);
+            this.playButton.Location = new System.Drawing.Point(1, 269);
             this.playButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(952, 48);
@@ -78,18 +78,30 @@
             this.panel1.Controls.Add(this.Nickname);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.HI_Scores);
+            this.panel1.Controls.Add(this.playButton);
             this.panel1.Controls.Add(this.Expert_HI);
             this.panel1.Controls.Add(this.Hard_HI);
             this.panel1.Controls.Add(this.Normal_HI);
             this.panel1.Controls.Add(this.Easy_HI);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.playButton);
             this.panel1.Location = new System.Drawing.Point(12, 124);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(960, 325);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label3.Location = new System.Drawing.Point(6, 211);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(175, 45);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Select a difficulty and \r\nenter a nickname to \r\nstart the game!";
             // 
             // Nickname
             // 
@@ -283,18 +295,6 @@
             this.label2.Size = new System.Drawing.Size(288, 77);
             this.label2.TabIndex = 11;
             this.label2.Text = "CLICKER";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(6, 211);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 45);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Select a difficulty and \r\nenter a nickname to \r\nstart the game!";
             // 
             // MainMenu
             // 

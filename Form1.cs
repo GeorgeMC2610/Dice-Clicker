@@ -54,19 +54,22 @@ namespace csharp_vathomologoumeni_1
         //this checks if the button can be enabled or not. A difficulty option must be selected, and there must be a username provided.
         private void checkForEnable()
         {
+            //if there is a difficulty and a username provided
             if (radioButtonSelected && textBox1.Text.Length != 0)
             {
+                //we enable the button, with a blue colour, we hide the yellow text tip and we make the cursor a Hand model
                 playButton.Enabled = true;
                 playButton.BackColor = Color.RoyalBlue;
                 label3.Text = "";
-                //playButton.Cursor = Cursors.Hand;
+                playButton.Cursor = Cursors.Hand;
             }
             else
             {
+                //if not, we disable the button, with a gray colour, and then we show the yellow text tip. Even when we change the cursor it doesn't actually change, because the button is disabled.
                 playButton.Enabled = false;
                 playButton.BackColor = Color.LightGray;
                 label3.Text = "Select a difficulty and\nenter a nickname to\nstart the game!";
-                //playButton.Cursor = Cursors.No;
+                playButton.Cursor = Cursors.No;
             }
         }
 
