@@ -48,9 +48,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thisGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.theCreatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.difficultiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nicknameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -327,6 +327,20 @@
             this.helpToolStripMenuItem.Text = "About";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
+            // thisGameToolStripMenuItem
+            // 
+            this.thisGameToolStripMenuItem.Name = "thisGameToolStripMenuItem";
+            this.thisGameToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.thisGameToolStripMenuItem.Text = "This Game";
+            this.thisGameToolStripMenuItem.Click += new System.EventHandler(this.thisGameToolStripMenuItem_Click);
+            // 
+            // theCreatorToolStripMenuItem
+            // 
+            this.theCreatorToolStripMenuItem.Name = "theCreatorToolStripMenuItem";
+            this.theCreatorToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.theCreatorToolStripMenuItem.Text = "The Creator";
+            this.theCreatorToolStripMenuItem.Click += new System.EventHandler(this.theCreatorToolStripMenuItem_Click);
+            // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -338,31 +352,19 @@
             this.helpToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem1.Text = "Help";
             // 
-            // thisGameToolStripMenuItem
-            // 
-            this.thisGameToolStripMenuItem.Name = "thisGameToolStripMenuItem";
-            this.thisGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.thisGameToolStripMenuItem.Text = "This Game";
-            this.thisGameToolStripMenuItem.Click += new System.EventHandler(this.thisGameToolStripMenuItem_Click);
-            // 
-            // theCreatorToolStripMenuItem
-            // 
-            this.theCreatorToolStripMenuItem.Name = "theCreatorToolStripMenuItem";
-            this.theCreatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.theCreatorToolStripMenuItem.Text = "The Creator";
-            this.theCreatorToolStripMenuItem.Click += new System.EventHandler(this.theCreatorToolStripMenuItem_Click);
-            // 
             // howToPlayToolStripMenuItem
             // 
             this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
             this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.howToPlayToolStripMenuItem.Text = "How to play?";
+            this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
             // 
             // difficultiesToolStripMenuItem
             // 
             this.difficultiesToolStripMenuItem.Name = "difficultiesToolStripMenuItem";
             this.difficultiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.difficultiesToolStripMenuItem.Text = "Difficulties";
+            this.difficultiesToolStripMenuItem.Click += new System.EventHandler(this.difficultiesToolStripMenuItem_Click);
             // 
             // nicknameToolStripMenuItem
             // 
