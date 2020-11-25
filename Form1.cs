@@ -154,5 +154,32 @@ namespace csharp_vathomologoumeni_1
                 textBox1.Text = textBox1.Text.Trim('|');
             }
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thisGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This game was created in November 2020 as a mandatory-to-publish project in the third semester course called " +
+                            "\"Object Oriented Application Development\" of University of Piraeus. This project had to be created by every student individually, " +
+                            "as teams were not allowed. The maximum score this kind of project could yield, was 2 (out of 10) points to the final score. ", "What is this game?");
+        }
+
+        private void theCreatorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This game was made by Giorgos Seimenis (R.No.: p19204), Student in the Informatics Department, University of Piraeus. As soon as you press \"Yes\", you will be redirected to his GitHub Account. ", "Who created this game?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    System.Diagnostics.Process.Start("https://github.com/GeorgeMC2610");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Something went wrong. EXCEPTION MESSAGE: " + ex.Message);
+                }
+            }
+        }
     }
 }
