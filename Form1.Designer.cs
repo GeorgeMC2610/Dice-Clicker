@@ -51,6 +51,10 @@
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.thisGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.theCreatorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToPlayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.difficultiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nicknameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -99,7 +103,7 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -278,7 +282,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,7 +295,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -325,6 +329,11 @@
             // 
             // helpToolStripMenuItem1
             // 
+            this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.howToPlayToolStripMenuItem,
+            this.difficultiesToolStripMenuItem,
+            this.nicknameToolStripMenuItem,
+            this.highScoresToolStripMenuItem});
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
             this.helpToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem1.Text = "Help";
@@ -342,6 +351,30 @@
             this.theCreatorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.theCreatorToolStripMenuItem.Text = "The Creator";
             this.theCreatorToolStripMenuItem.Click += new System.EventHandler(this.theCreatorToolStripMenuItem_Click);
+            // 
+            // howToPlayToolStripMenuItem
+            // 
+            this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.howToPlayToolStripMenuItem.Text = "How to play?";
+            // 
+            // difficultiesToolStripMenuItem
+            // 
+            this.difficultiesToolStripMenuItem.Name = "difficultiesToolStripMenuItem";
+            this.difficultiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.difficultiesToolStripMenuItem.Text = "Difficulties";
+            // 
+            // nicknameToolStripMenuItem
+            // 
+            this.nicknameToolStripMenuItem.Name = "nicknameToolStripMenuItem";
+            this.nicknameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nicknameToolStripMenuItem.Text = "Nickname";
+            // 
+            // highScoresToolStripMenuItem
+            // 
+            this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
+            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.highScoresToolStripMenuItem.Text = "High Scores";
             // 
             // MainMenu
             // 
@@ -398,6 +431,10 @@
         private System.Windows.Forms.ToolStripMenuItem thisGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem theCreatorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem howToPlayToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem difficultiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nicknameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem;
     }
 }
 
