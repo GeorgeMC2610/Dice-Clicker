@@ -20,6 +20,7 @@ namespace csharp_vathomologoumeni_1
         short index = 0;
         int score = 0;
         int time = 60;
+        bool controlledExit = false;
 
         public DiceClicker(short difficulty, string username)
         {
@@ -124,17 +125,23 @@ namespace csharp_vathomologoumeni_1
 
         private void EndGame()
         {
-            //When the timer runs out this function
+            //When the timer runs out this function gets called
+            //we set the automatically the time to 0, even if it is already 0.
             time = 0;
             label1.Text = "Time: 0";
 
+            //we disable all the timers.
             timer1.Enabled = timer2.Enabled = false;
+
+            //we show the player's score
             MessageBox.Show("Total Score: " + score.ToString(), "Game Over!");
 
+            //we try to save the user's score inside the text file
             try
             {
                 StreamReader sr = new StreamReader("highscores.txt");
 
+                //this handles the case when the text file is empty. Then we write a single line with the score.
                 string All = sr.ReadToEnd();
                 if (All.Length < 3)
                 {
@@ -144,6 +151,7 @@ namespace csharp_vathomologoumeni_1
                     sw.Write(username + "|" + label3.Text + "|" + score.ToString());
                     sw.Close();
                 }
+                //if it's not empty, we first leave a line, and then we write down the score.
                 else
                 {
                     sr.Close();
@@ -153,27 +161,34 @@ namespace csharp_vathomologoumeni_1
                     sw.Close();
                 }
             }
+            //if for any reason there is an exception, the high score doesn't get stored.
             catch (Exception ex)
             {
                 MessageBox.Show("Cannot store score, file not found.\n Exception Message: " + ex.Message, "ERROR");
             }
                 
-
+            //then we show the first form to the user and we close this one.
             new MainMenu().Show();
+
+            //since this is a controlled exit, there is no need to close all the other forms.
+            controlledExit = true;
             Close();
         }
 
         private void DiceClicker_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //when the user accidentally closes the form, we make sure that all the other forms close as well.
-            try
+            if (!controlledExit)
             {
-                foreach (Form f in Application.OpenForms)
-                    f.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
+                //when the user accidentally closes the form, we make sure that all the other forms close as well.
+                try
+                {
+                    foreach (Form f in Application.OpenForms)
+                        f.Close();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
             }
         }
     }

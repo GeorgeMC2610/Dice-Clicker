@@ -30,6 +30,7 @@
         {
             this.playButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ClearHighscores = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.Nickname = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.difficultiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nicknameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ClearHighscores = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -102,6 +102,21 @@
             this.panel1.Size = new System.Drawing.Size(1223, 405);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // ClearHighscores
+            // 
+            this.ClearHighscores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClearHighscores.BackColor = System.Drawing.Color.Brown;
+            this.ClearHighscores.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearHighscores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClearHighscores.Location = new System.Drawing.Point(1041, 222);
+            this.ClearHighscores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearHighscores.Name = "ClearHighscores";
+            this.ClearHighscores.Size = new System.Drawing.Size(165, 44);
+            this.ClearHighscores.TabIndex = 51;
+            this.ClearHighscores.Text = "CLEAR HIGHSCORES";
+            this.ClearHighscores.UseVisualStyleBackColor = false;
+            this.ClearHighscores.Click += new System.EventHandler(this.ClearHighscores_Click);
             // 
             // label3
             // 
@@ -357,21 +372,21 @@
             // howToPlayToolStripMenuItem
             // 
             this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
-            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.howToPlayToolStripMenuItem.Text = "How to play?";
             this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
             // 
             // difficultiesToolStripMenuItem
             // 
             this.difficultiesToolStripMenuItem.Name = "difficultiesToolStripMenuItem";
-            this.difficultiesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.difficultiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.difficultiesToolStripMenuItem.Text = "Difficulties";
             this.difficultiesToolStripMenuItem.Click += new System.EventHandler(this.difficultiesToolStripMenuItem_Click);
             // 
             // nicknameToolStripMenuItem
             // 
             this.nicknameToolStripMenuItem.Name = "nicknameToolStripMenuItem";
-            this.nicknameToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.nicknameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nicknameToolStripMenuItem.Text = "Nickname";
             this.nicknameToolStripMenuItem.Click += new System.EventHandler(this.nicknameToolStripMenuItem_Click);
             // 
@@ -381,20 +396,6 @@
             this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.highScoresToolStripMenuItem.Text = "High Scores";
             this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
-            // 
-            // ClearHighscores
-            // 
-            this.ClearHighscores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ClearHighscores.BackColor = System.Drawing.Color.Brown;
-            this.ClearHighscores.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClearHighscores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClearHighscores.Location = new System.Drawing.Point(1041, 222);
-            this.ClearHighscores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ClearHighscores.Name = "ClearHighscores";
-            this.ClearHighscores.Size = new System.Drawing.Size(165, 44);
-            this.ClearHighscores.TabIndex = 51;
-            this.ClearHighscores.Text = "CLEAR HIGHSCORES";
-            this.ClearHighscores.UseVisualStyleBackColor = false;
             // 
             // MainMenu
             // 

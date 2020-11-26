@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace csharp_vathomologoumeni_1
@@ -49,25 +50,25 @@ namespace csharp_vathomologoumeni_1
                 {
                     if (points[j] < points[j + 1])
                     {
-                        int temp0 = points[j];
-                        points[j] = points[j + 1];
+                        int temp0     = points[j];
+                        points[j]     = points[j + 1];
                         points[j + 1] = temp0;
 
-                        string temp1 = name[j];
-                        name[j] = name[j + 1];
-                        name[j + 1] = temp1;
+                        string temp1  = name[j];
+                        name[j]       = name[j + 1];
+                        name[j + 1]   = temp1;
 
-                        string temp2 = difficulty[j];
-                        difficulty[j] = difficulty[j + 1];
+                        string temp2      = difficulty[j];
+                        difficulty[j]     = difficulty[j + 1];
                         difficulty[j + 1] = temp2;
                     }
                 }
             }
 
             //first we create a variable for each possible difficulty we encounter
-            int easy_counter = 0;
+            int easy_counter   = 0;
             int normal_counter = 0;
-            int hard_counter = 0;
+            int hard_counter   = 0;
             int expert_counter = 0;
 
             //in order to display the data to the other form, we need to use this loop

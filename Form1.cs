@@ -187,7 +187,7 @@ namespace csharp_vathomologoumeni_1
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Something went wrong. EXCEPTION MESSAGE: " + ex.Message);
+                    MessageBox.Show("Something went wrong. EXCEPTION MESSAGE: " + ex.Message, "Error");
                 }
             }
         }
@@ -235,6 +235,35 @@ namespace csharp_vathomologoumeni_1
 
                 "The .txt file can be modified directly, but you should make sure the " +
                 "game is completely closed and be careful on how you write things, as it might not work properly if there are seperate lines with no attributes.", "Highscores guide");
+        }
+
+        private void ClearHighscores_Click(object sender, EventArgs e)
+        {
+            if (EasyHI[0].Equals("---") && NormalHI[0].Equals("---") && HardHI[0].Equals("---") && ExpertHI[0].Equals("---"))
+            {
+                
+                MessageBox.Show("This action cannot be done, as there are no high scores stored.", "Highscores Empty");
+                return;
+            }
+
+            if (MessageBox.Show("Effects cannot be reversed, once highscores get deleted. Are you sure?", "Delete all high scores?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    //we first delete all the values in the text file.
+                    StreamWriter sw = new StreamWriter("highscores.txt");
+                    sw.Write("");
+                    sw.Close();
+
+                    //and then we update the arrays (as when the form starts)
+                    for (int i = 0; i < 5; i++)
+                        EasyHI[i] = NormalHI[i] = HardHI[i] = ExpertHI[i] = "---";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to delete scores. \n\nReason: " + ex.Message, "Error");
+                }
+            }
         }
     }
 }
