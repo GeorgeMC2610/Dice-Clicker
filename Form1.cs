@@ -159,7 +159,8 @@ namespace csharp_vathomologoumeni_1
 
             if (textBox1.Text.Contains('|'))
             {
-                MessageBox.Show("This character ('|') cannot be entered as a username.", "Invalid Username");
+                //we show the corresponding message to the user.
+                MessageBox.Show("The vertical bar ('|') is a banned character (See Help-->Nicknames).", "Invalid Username");
                 textBox1.Text = textBox1.Text.Trim('|');
             }
         }
@@ -218,7 +219,22 @@ namespace csharp_vathomologoumeni_1
 
         private void nicknameToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Before you play the game, a nickname must be provided, otherwise the game doesn't start. This happens because " +
+                "every player's highscore must be on the leaderboard, as this is something that meets the project requirements.\n\n" +
+                
+                "The only banned character, which none of the players can provide, is the Vertical Bar character '|'. The text file, " +
+                "in which the players' scores get stored, seprates each property of the highscore (Nickname|DIFFICULTY|score). If a player " +
+                "provides the vertical bar, it breaks the way the highscores are stored.", "Nicknames guide");
+        }
 
+        private void highScoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Highscores get stored in the \"highscores.txt\" file, in which there is simple text written by the program to store the highscores. " +
+                "To store the scores, the program seperates three attributes with the vertical bar character ('|'). Different players get seperated with a single " +
+                "line change.\n\n" +
+
+                "The .txt file can be modified directly, but you should make sure the " +
+                "game is completely closed and be careful on how you write things, as it might not work properly if there are seperate lines with no attributes.", "Highscores guide");
         }
     }
 }
