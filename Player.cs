@@ -9,22 +9,6 @@ namespace csharp_vathomologoumeni_1
 {
     class Player
     {
-        public string Name { get; set; }
-        private int score;
-
-        public int Score
-        {
-            get 
-            {
-                return this.score;
-            }
-
-            set
-            {
-                score = (value > 0) ? value : score;
-            }
-        }
-
         public static void SortHighScores()
         {
             //first, try to open the file

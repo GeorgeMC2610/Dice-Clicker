@@ -371,6 +371,7 @@
             this.nicknameToolStripMenuItem.Name = "nicknameToolStripMenuItem";
             this.nicknameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nicknameToolStripMenuItem.Text = "Nickname";
+            this.nicknameToolStripMenuItem.Click += new System.EventHandler(this.nicknameToolStripMenuItem_Click);
             // 
             // highScoresToolStripMenuItem
             // 

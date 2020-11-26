@@ -95,8 +95,8 @@ namespace csharp_vathomologoumeni_1
             }
 
             //the location also randomly changes. But we don't want it to clip out of the window. So we set the bounds accordingly
-            int x = random.Next(Width - pictureBox1.Width);
-            int y = random.Next(Height - pictureBox1.Height);
+            int x = random.Next(panel1.Location.X, panel1.Width  - pictureBox1.Width);
+            int y = random.Next(panel1.Location.Y, panel1.Height - pictureBox1.Height);
 
             pictureBox1.Location = new Point(x, y);
         }

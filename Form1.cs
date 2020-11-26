@@ -109,7 +109,17 @@ namespace csharp_vathomologoumeni_1
 
         private void ExitGame_Click(object sender, EventArgs e)
         {
-            Close();
+            //Sometimes, exiting by pressing 'X' doesn't work. So we make sure all hidden (open) forms close.
+            try
+            {
+                foreach (Form f in Application.OpenForms)
+                    f.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
         }
 
         //Here we show the highest scores using the buttons provided
@@ -205,6 +215,11 @@ namespace csharp_vathomologoumeni_1
                 "EXPERT: \nHardest difficulty is for expert players only! The creator himslef hasn't done a score over 10 points. This " +
                 "difficulty gives zero time to react and the picture box is really small to click. There is still a chance to hit a bomb" +
                 "instead.", "Difficulties guide");
+        }
+
+        private void nicknameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
