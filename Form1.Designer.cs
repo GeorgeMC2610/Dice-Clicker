@@ -55,6 +55,7 @@
             this.difficultiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nicknameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.highScoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ClearHighscores = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -68,10 +69,10 @@
             this.playButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.playButton.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.playButton.Location = new System.Drawing.Point(1, 269);
+            this.playButton.Location = new System.Drawing.Point(1, 349);
             this.playButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.playButton.Name = "playButton";
-            this.playButton.Size = new System.Drawing.Size(952, 48);
+            this.playButton.Size = new System.Drawing.Size(1215, 48);
             this.playButton.TabIndex = 7;
             this.playButton.Text = "START GAME";
             this.playButton.UseVisualStyleBackColor = false;
@@ -84,6 +85,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.ClearHighscores);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Nickname);
             this.panel1.Controls.Add(this.textBox1);
@@ -97,7 +99,7 @@
             this.panel1.Location = new System.Drawing.Point(12, 124);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 325);
+            this.panel1.Size = new System.Drawing.Size(1223, 405);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -107,7 +109,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(6, 211);
+            this.label3.Location = new System.Drawing.Point(6, 291);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 45);
             this.label3.TabIndex = 12;
@@ -139,7 +141,7 @@
             this.HI_Scores.AutoSize = true;
             this.HI_Scores.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HI_Scores.ForeColor = System.Drawing.SystemColors.Control;
-            this.HI_Scores.Location = new System.Drawing.Point(773, 4);
+            this.HI_Scores.Location = new System.Drawing.Point(1036, 4);
             this.HI_Scores.Name = "HI_Scores";
             this.HI_Scores.Size = new System.Drawing.Size(178, 24);
             this.HI_Scores.TabIndex = 50;
@@ -150,7 +152,7 @@
             this.Expert_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Expert_HI.BackColor = System.Drawing.Color.Maroon;
             this.Expert_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Expert_HI.Location = new System.Drawing.Point(778, 142);
+            this.Expert_HI.Location = new System.Drawing.Point(1041, 142);
             this.Expert_HI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Expert_HI.Name = "Expert_HI";
             this.Expert_HI.Size = new System.Drawing.Size(165, 27);
@@ -164,7 +166,7 @@
             this.Hard_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Hard_HI.BackColor = System.Drawing.Color.Red;
             this.Hard_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Hard_HI.Location = new System.Drawing.Point(778, 110);
+            this.Hard_HI.Location = new System.Drawing.Point(1041, 110);
             this.Hard_HI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Hard_HI.Name = "Hard_HI";
             this.Hard_HI.Size = new System.Drawing.Size(165, 27);
@@ -178,7 +180,7 @@
             this.Normal_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Normal_HI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.Normal_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Normal_HI.Location = new System.Drawing.Point(778, 77);
+            this.Normal_HI.Location = new System.Drawing.Point(1041, 77);
             this.Normal_HI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Normal_HI.Name = "Normal_HI";
             this.Normal_HI.Size = new System.Drawing.Size(165, 27);
@@ -192,7 +194,7 @@
             this.Easy_HI.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Easy_HI.BackColor = System.Drawing.Color.Green;
             this.Easy_HI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Easy_HI.Location = new System.Drawing.Point(778, 44);
+            this.Easy_HI.Location = new System.Drawing.Point(1041, 44);
             this.Easy_HI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Easy_HI.Name = "Easy_HI";
             this.Easy_HI.Size = new System.Drawing.Size(165, 27);
@@ -271,7 +273,7 @@
             this.ExitGame.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ExitGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.ExitGame.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ExitGame.Location = new System.Drawing.Point(862, 28);
+            this.ExitGame.Location = new System.Drawing.Point(1125, 28);
             this.ExitGame.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ExitGame.Name = "ExitGame";
             this.ExitGame.Size = new System.Drawing.Size(110, 34);
@@ -287,7 +289,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(434, 24);
+            this.label1.Location = new System.Drawing.Point(565, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 34);
             this.label1.TabIndex = 10;
@@ -300,7 +302,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(374, 58);
+            this.label2.Location = new System.Drawing.Point(505, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(217, 58);
             this.label2.TabIndex = 11;
@@ -313,7 +315,7 @@
             this.helpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1247, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -355,29 +357,43 @@
             // howToPlayToolStripMenuItem
             // 
             this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
-            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.howToPlayToolStripMenuItem.Text = "How to play?";
             this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
             // 
             // difficultiesToolStripMenuItem
             // 
             this.difficultiesToolStripMenuItem.Name = "difficultiesToolStripMenuItem";
-            this.difficultiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.difficultiesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.difficultiesToolStripMenuItem.Text = "Difficulties";
             this.difficultiesToolStripMenuItem.Click += new System.EventHandler(this.difficultiesToolStripMenuItem_Click);
             // 
             // nicknameToolStripMenuItem
             // 
             this.nicknameToolStripMenuItem.Name = "nicknameToolStripMenuItem";
-            this.nicknameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nicknameToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.nicknameToolStripMenuItem.Text = "Nickname";
             this.nicknameToolStripMenuItem.Click += new System.EventHandler(this.nicknameToolStripMenuItem_Click);
             // 
             // highScoresToolStripMenuItem
             // 
             this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
-            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.highScoresToolStripMenuItem.Text = "High Scores";
+            // 
+            // ClearHighscores
+            // 
+            this.ClearHighscores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClearHighscores.BackColor = System.Drawing.Color.Brown;
+            this.ClearHighscores.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClearHighscores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClearHighscores.Location = new System.Drawing.Point(1041, 222);
+            this.ClearHighscores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ClearHighscores.Name = "ClearHighscores";
+            this.ClearHighscores.Size = new System.Drawing.Size(165, 44);
+            this.ClearHighscores.TabIndex = 51;
+            this.ClearHighscores.Text = "CLEAR HIGHSCORES";
+            this.ClearHighscores.UseVisualStyleBackColor = false;
             // 
             // MainMenu
             // 
@@ -385,7 +401,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.ClientSize = new System.Drawing.Size(1247, 541);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExitGame);
@@ -438,6 +454,7 @@
         private System.Windows.Forms.ToolStripMenuItem difficultiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nicknameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem highScoresToolStripMenuItem;
+        private System.Windows.Forms.Button ClearHighscores;
     }
 }
 

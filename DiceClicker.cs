@@ -125,6 +125,9 @@ namespace csharp_vathomologoumeni_1
         private void EndGame()
         {
             //When the timer runs out this function
+            time = 0;
+            label1.Text = "Time: 0";
+
             timer1.Enabled = timer2.Enabled = false;
             MessageBox.Show("Total Score: " + score.ToString(), "Game Over!");
 
@@ -158,6 +161,20 @@ namespace csharp_vathomologoumeni_1
 
             new MainMenu().Show();
             Close();
+        }
+
+        private void DiceClicker_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //when the user accidentally closes the form, we make sure that all the other forms close as well.
+            try
+            {
+                foreach (Form f in Application.OpenForms)
+                    f.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
     }
 }

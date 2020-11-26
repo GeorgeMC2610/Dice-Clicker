@@ -119,7 +119,6 @@ namespace csharp_vathomologoumeni_1
             {
                 Console.WriteLine(ex);
             }
-            
         }
 
         //Here we show the highest scores using the buttons provided
