@@ -194,17 +194,24 @@ namespace csharp_vathomologoumeni_1
 
         private void howToPlayToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("HOW TO START:\n" +
+                "Select a difficulty from the left box containing all difficulties (Easy, Normal, Hard, Expert) and " +
+                "enter a nickname. Once you've done that, the button becomes blue and allows you to start playing!\n\n" +
+                
+                "MAIN GOAL:\n" +
+                "Click the picture box, as it moves randomly in the panel, containing the dice in order to get points. Every point is the value of the dice. " +
+                "For example, if you click a dice with 4 dots, you get 4 points. All your points add up to your final score, until the game ends " +
+                "in 60 seconds. Once the game ends, your score gets stored, and if it is high enough, it will show up in the top 5 leaderboard!", "How to play?");
         }
 
         private void difficultiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("There are four different difficulties you can choose. Specifiacally...\n\n\n" +
 
-                "EASY: \nThe easiest difficulty available has the biggest picture box to click on, provides the biggest" +
+                "EASY: \nThe easiest difficulty available has the biggest picture box to click on, provides the biggest " +
                 "amount of time *1 second* to click (multiple times) on the box before it moves. \n\n" +
 
-                "NORMAL: \nNormal difficulty is still easy to go through, as the picture box and reaction time are 25% smaller." +
+                "NORMAL: \nNormal difficulty is still easy to go through, as the picture box and reaction time are 25% smaller. " +
                 "There is still time to click multiple times to the picture box in order to yield more points at a time. \n\n" +
                 
                 "HARD: \nHard difficulty is the most challening of all. Dice are not the only ones to appear in the picture box, " +
@@ -213,7 +220,7 @@ namespace csharp_vathomologoumeni_1
                 "impossible to click on the box more than one time before it moves. \n\n" +
                 
                 "EXPERT: \nHardest difficulty is for expert players only! The creator himslef hasn't done a score over 10 points. This " +
-                "difficulty gives zero time to react and the picture box is really small to click. There is still a chance to hit a bomb" +
+                "difficulty gives zero time to react and the picture box is really small to click. There is still a chance to hit a bomb " +
                 "instead.", "Difficulties guide");
         }
 
@@ -239,9 +246,9 @@ namespace csharp_vathomologoumeni_1
 
         private void ClearHighscores_Click(object sender, EventArgs e)
         {
+            //if the highscores are already empty, there is no need to empty them again.
             if (EasyHI[0].Equals("---") && NormalHI[0].Equals("---") && HardHI[0].Equals("---") && ExpertHI[0].Equals("---"))
             {
-                
                 MessageBox.Show("This action cannot be done, as there are no high scores stored.", "Highscores Empty");
                 return;
             }
