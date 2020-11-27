@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.playButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ClearHighscores = new System.Windows.Forms.Button();
@@ -317,7 +318,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(505, 58);
+            this.label2.Location = new System.Drawing.Point(500, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(217, 58);
             this.label2.TabIndex = 11;
@@ -372,28 +373,28 @@
             // howToPlayToolStripMenuItem
             // 
             this.howToPlayToolStripMenuItem.Name = "howToPlayToolStripMenuItem";
-            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.howToPlayToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.howToPlayToolStripMenuItem.Text = "How to play?";
             this.howToPlayToolStripMenuItem.Click += new System.EventHandler(this.howToPlayToolStripMenuItem_Click);
             // 
             // difficultiesToolStripMenuItem
             // 
             this.difficultiesToolStripMenuItem.Name = "difficultiesToolStripMenuItem";
-            this.difficultiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.difficultiesToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.difficultiesToolStripMenuItem.Text = "Difficulties";
             this.difficultiesToolStripMenuItem.Click += new System.EventHandler(this.difficultiesToolStripMenuItem_Click);
             // 
             // nicknameToolStripMenuItem
             // 
             this.nicknameToolStripMenuItem.Name = "nicknameToolStripMenuItem";
-            this.nicknameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nicknameToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.nicknameToolStripMenuItem.Text = "Nickname";
             this.nicknameToolStripMenuItem.Click += new System.EventHandler(this.nicknameToolStripMenuItem_Click);
             // 
             // highScoresToolStripMenuItem
             // 
             this.highScoresToolStripMenuItem.Name = "highScoresToolStripMenuItem";
-            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.highScoresToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.highScoresToolStripMenuItem.Text = "High Scores";
             this.highScoresToolStripMenuItem.Click += new System.EventHandler(this.highScoresToolStripMenuItem_Click);
             // 
@@ -410,6 +411,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
