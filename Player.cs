@@ -17,7 +17,7 @@ namespace csharp_vathomologoumeni_1
             string Reader = sr.ReadToEnd();
 
             //if the file opens, but there are barely any data inside it, don't do anything
-            if (Reader.Length < 3)
+            if (Reader.Length < 5)
                 return;
 
             //otherwise we split the words by the line change and try to store it in this array.
@@ -35,11 +35,22 @@ namespace csharp_vathomologoumeni_1
             for (int i = 0; i < allScores.Length; i++)
             {
                 //each position of the arrays corresponds to the same person who played.
-                string[] attributes = allScores[i].Split('|');
+                try
+                {
+                    string[] attributes = allScores[i].Split('|');
 
-                name[i]       = attributes[0];
-                difficulty[i] = attributes[1];
-                points[i]     = int.Parse(attributes[2]);
+                    name[i] = attributes[0];
+                    difficulty[i] = attributes[1];
+                    points[i] = int.Parse(attributes[2]);
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show("Invalid attributes were given in a highscore.\n\n" +
+                        "Highscore value: " + string.Join(", ", allScores) + "\n\nException Message: " + ex.Message +
+                        "\n\nCheck if there is a bare change of line or too many attributes somewhere in the textfile. Game will proceed without counting highscores.", "Warning");
+
+                    return;
+                }
             }
 
             //then we sort the arrays by descending score
