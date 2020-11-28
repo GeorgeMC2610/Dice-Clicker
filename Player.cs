@@ -48,7 +48,7 @@ namespace csharp_vathomologoumeni_1
                 {
                     System.Windows.Forms.MessageBox.Show("Invalid attributes were given in a highscore.\n\n" +
                         "Highscore value: " + string.Join(", ", allScores) + "\n\nException Message: " + ex.Message +
-                        "\n\nCheck if there is a bare change of line or too many attributes somewhere in the textfile. Game will proceed without counting highscores.", "Warning");
+                        "\n\nCheck if there is a bare change of line or too many attributes somewhere in the textfile. \n\nGame will proceed without counting highscores.", "Invalid Highscore");
 
                     return;
                 }
