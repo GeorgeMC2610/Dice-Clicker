@@ -246,8 +246,12 @@ namespace csharp_vathomologoumeni_1
 
         private void ClearHighscores_Click(object sender, EventArgs e)
         {
+            StreamReader sr = new StreamReader("highscores.txt");
+            string highscores = sr.ReadToEnd();
+            sr.Close();
+
             //if the highscores are already empty, there is no need to empty them again.
-            if (EasyHI[0].Equals("---") && NormalHI[0].Equals("---") && HardHI[0].Equals("---") && ExpertHI[0].Equals("---"))
+            if (highscores.Length == 0)
             {
                 MessageBox.Show("This action cannot be done, as there are no high scores stored.", "Highscores Empty");
                 return;

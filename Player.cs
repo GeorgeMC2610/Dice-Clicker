@@ -15,6 +15,7 @@ namespace csharp_vathomologoumeni_1
             //first, try to open the file
             StreamReader sr = new StreamReader("highscores.txt");
             string Reader = sr.ReadToEnd();
+            sr.Close();
 
             //if the file opens, but there are barely any data inside it, don't do anything
             if (Reader.Length < 5)
@@ -111,8 +112,6 @@ namespace csharp_vathomologoumeni_1
                     expert_counter++;
                 }
             }
-
-            sr.Close();
         }
     }
 }
